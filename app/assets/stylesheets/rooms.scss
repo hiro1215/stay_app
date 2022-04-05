@@ -1,0 +1,131 @@
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 18px;
+  color: #000;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+.update-content {
+  width: 100%;
+}
+.room-view {
+  background-color: #F6F8F9;
+  border-left: 2px solid #e2e2e2;
+}
+
+.room-view-box {
+  margin: 50px auto;
+  max-width: 880px;
+}
+
+.room-new .update-content {
+  border-bottom: 1px solid #eaedef;
+  padding: 20px;
+  margin: 0 15px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.room-new .update-content label {
+  font-weight: bold;
+  padding: 0 15px;
+  width: 179.5px;
+}
+
+.update-content input {
+  padding: 6px 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.room-show-image {
+  width: 100%;
+}
+
+.col-md-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.room{
+  width: 100%;
+  padding: 30px 60px;
+  box-sizing: border-box;
+}
+
+.room-image{
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  top: 20px;
+  object-fit: cover;
+}
+
+.room-show-detile{
+  display: flex;
+}
+
+.room-show-detile-icon {
+  padding: 10px;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+.room-show-detile-icon img{
+  border-radius: 50%;
+}
+
+.col-sm-6,.col-l-4,.col-xl-3 {
+  flex: 0 0 30%;
+  max-width: 33.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.room-frame-inner{
+  border: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.room-profile {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.room-profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #909090;
+}
+
+.room-image-out {
+  position: relative;
+     width: 100%; 
+    background: #F6F8F9;
+    height: 200px;
+}
+
+.room-profile-city {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.room-profile-price {
+  text-align: right;
+    font-size: 16px;
+    letter-spacing: 1px;
+}

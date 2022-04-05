@@ -1,0 +1,47 @@
+<header class="header">
+  <div class="header-inner">
+    <div class="header-left-nav">
+      <a href="/"><img alt="サイトのロゴ画像" src="assets/logo.png" /></a>
+      <div class="search-form">
+        <%= form_with url: search_path, method: :get, local: true do |f| %>
+          <%= f.text_field :name %>
+          <%= f.submit "検索" %>
+        <% end %>
+        
+      </div>
+    </div>
+
+    <div class="header-right-nav">
+      <% if user_signed_in? %>
+        <div class="nav-item d-sm-inline-block d-none"> <%= current_user.name %> </div>
+        <div class="nav-item">
+          <img class="mx-3 p-1 host-icon nav-trigger" alt="メニュー" src="/assets/default_icon.jpg" />
+          <ul class="header-nav-menu" style="display: none;">
+            <li><a href="/rooms/new">ルーム登録</a></li>
+            <li><a href="/rooms/index">予約済みルーム一覧</a></li>
+            <li><a href="">登録済みルーム一覧</a></li>
+            <li><a href="/users/account">設定</a></li>
+            <li><a rel="nofollow" data-turbo-method="delete" href="/users/sign_out">ログアウト</a></li>
+          </ul>
+        </div>
+      <% else %>
+        <a class="btn btn-primary my-2 mx-3"  href="/users/sign_in">ログイン</a>
+        <a class="btn btn-secondary" href="/users/sign_up">登録する</a>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+  
+  <script>
+    $(function() {
+      $('.nav-trigger').click(function() {
+        $('.header-nav-menu').toggle(1500);
+        })
+    });
+  </script>
+</header>
+
+<div class="notifications">
+  <div class="notice">notice</div>
+</div>

@@ -1,0 +1,65 @@
+<div class= "container-field room-new">
+  
+  <div class= "room-view">
+    <div class= "room-view-box">
+      
+      <%= form_with model: @room do |f| %>
+        <div class= "update-content">
+          <div class= "row">
+            <h5>ルーム情報登録</h5>
+          </div>
+        </div>
+
+        <div hidden class= "update-content">
+          <div class= "row" hidden>
+            <%= f.label :user_id ,"id" %>
+            <%= f.text_field :user_id, value: "#{ current_user.id }" %>
+          </div>
+        </div>
+
+        <div class= "update-content">
+          <div class= "row">
+            <%= f.label :name ,"ルーム名" %>
+            <%= f.text_field :name %>
+          </div>
+        </div>
+
+        <div class= "update-content">
+          <div class= "row">
+            <%= f.label :introduction ,"ルーム紹介" %>
+            <%= f.text_field :introduction %>
+          </div>
+        </div>
+
+        <div class= "update-content">
+          <div class= "row">
+            <%= f.label :price ,"料金" %>
+            <%= f.text_field :price %>
+          </div>
+        </div>
+
+        <div class= "update-content">
+          <div class= "row">
+            <%= f.label :address ,"住所" %>
+            <%= f.text_field :address %>
+          </div>
+        </div>
+
+        <div class= "update-content">
+          <div class= "row">
+            <%= f.label :image ,"ルーム画像" %>
+            <%= f.file_field :image %>
+          </div>
+        </div>
+        
+        <div class= "update-content">
+          <div class= "row">
+            <%= f.submit "登録"%>
+          <div>
+        </div>
+      <% end %>
+      
+    </div>
+  </div>
+  
+</div>
